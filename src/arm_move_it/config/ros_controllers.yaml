@@ -1,0 +1,38 @@
+arm_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - base_link_cyclnder_joint
+    - cylinder_link_first_box_joint
+    - first_box_second_box_joint
+    - second_box_third_box_joint
+  gains:
+    base_link_cyclnder_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    cylinder_link_first_box_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    first_box_second_box_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    second_box_third_box_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+gripper_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - grabber_link_garbber_right_joint
+  gains:
+    grabber_link_garbber_right_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

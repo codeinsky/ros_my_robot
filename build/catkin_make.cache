@@ -1,0 +1,2 @@
+arm_move_it:my_robot_description:python_scipt_pkg
+-DCATKIN_DEVEL_PREFIX=/home/yahboom/my_project_move_it/devel -DCMAKE_INSTALL_PREFIX=/home/yahboom/my_project_move_it/install -G Unix Makefiles

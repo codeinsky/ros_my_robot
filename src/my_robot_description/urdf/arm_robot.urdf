@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<robot name="robot_model_pkg">
+    <!--LINKS-->
+    <link name="ground" xyz="0 0 0" rpy="0 0 0" />
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0.04" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.04" length="0.08" />
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.04" length="0.08" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.100" />
+            <origin xyz="0 0 0.4" rpy="0 0 0" />
+            <inertia ixx="0.00013" ixy="0" ixz="0" iyy="0.00013" iyz="0" izz="0.00008" />
+        </inertial>
+  
+    </link>
+    <link name="cylinder_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.04" length="0.005" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 1 1" />
+            </material>
+        </visual>
+       <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.04" length="0.005" />
+            </geometry>
+  	    </collision>
+        <inertial>
+            <mass value="0.01" />
+            <origin xyz="0 0 0.4" rpy="0 0 0" />
+            <inertia ixx="0.000013" ixy="0" ixz="0" iyy="0.000013" iyz="0" izz="0.000008" />
+        </inertial>
+  
+    </link>
+    <link name="first_box_link">
+        <visual>
+            <origin xyz="0 0 0.048" rpy="0 0 0" />
+            <geometry>
+                <box size="0.02 0.02 0.08" />
+            </geometry>
+            <material name="green">
+                <color rgba="0 1 0 1" />
+            </material>
+        </visual>
+       <collision>
+            <origin xyz="0 0 0.045" rpy="0 0 0" />
+            <geometry>
+                <box size="0.02 0.02 0.08" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0.048" rpy="0 0 0" />
+            <inertia ixx="0.00013" ixy="0" ixz="0" iyy="0.00013" iyz="0" izz="0.00008" />
+   	  </inertial>
+  
+    </link>
+    <link name="second_box_link">
+        <visual>
+            <origin xyz="0 0 0.037" rpy="0 0 0" />
+            <geometry>
+                <box size="0.02 0.02 0.08" />
+            </geometry>
+            <material name="blue" />
+        </visual>
+       <collision>
+            <origin xyz="0 0 0.037" rpy="0 0 0" />
+            <geometry>
+                <box size="0.02 0.02 0.08" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0.037" rpy="0 0 0" />
+            <inertia ixx="0.00013" ixy="0" ixz="0" iyy="0.00013" iyz="0" izz="0.00008" />
+        </inertial>
+   
+    </link>
+    <link name="third_box_link">
+        <visual>
+            <origin xyz="0 0 0.04" rpy="0 0 0" />
+            <geometry>
+                <box size="0.02 0.02 0.08" />
+            </geometry>
+            <material name="yellow">
+                <color rgba="1 1 0 1" />
+            </material>
+        </visual>
+    <collision>
+            <origin xyz="0 0 0.04" rpy="0 0 0" />
+            <geometry>
+                <box size="0.02 0.02 0.08" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0.04" rpy="0 0 0" />
+            <inertia ixx="0.00013" ixy="0" ixz="0" iyy="0.00013" iyz="0" izz="0.00008" />
+        </inertial>
+    
+    </link>
+    <link name="grabber_link">
+        <visual>
+            <origin xyz="0 0 0.0125" rpy="0 0 0" />
+            <geometry>
+                <box size="0.025 0.1 0.025" />
+            </geometry>
+            <material name="grey">
+                <color rgba="0.5 0.5 0.5 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.0125" rpy="0 0 0" />
+            <geometry>
+                <box size="0.025 0.1 0.025" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0.04" rpy="0 0 0" />
+            <inertia ixx="0.00013" ixy="0" ixz="0" iyy="0.00013" iyz="0" izz="0.00008" />
+        </inertial>
+  
+    </link>
+    <link name="grabber_left">
+        <visual>
+            <origin xyz="0 0 0.040" rpy="0 0 0" />
+            <geometry>
+                <box size="0.025 0.02 0.1" />
+            </geometry>
+            <material name="red" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.040" rpy="0 0 0" />
+            <geometry>
+                <box size="0.025 0.02 0.1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0.04" rpy="0 0 0" />
+            <inertia ixx="0.00013" ixy="0" ixz="0" iyy="0.00013" iyz="0" izz="0.00008" />
+        </inertial>
+   
+    </link>
+    <link name="grabber_right">
+        <visual>
+            <origin xyz="0 0 0.040" rpy="0 0 0" />
+            <geometry>
+                <box size="0.025 0.02 0.1" />
+            </geometry>
+            <material name="red" />
+        </visual>
+       <collision>
+            <origin xyz="0 0 0.040" rpy="0 0 0" />
+            <geometry>
+                <box size="0.025 0.02 0.1" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0.04" rpy="0 0 0" />
+            <inertia ixx="0.00013" ixy="0" ixz="0" iyy="0.00013" iyz="0" izz="0.00008" />
+        </inertial>
+    
+    </link>
+    <!--JOINTS-->
+    <joint name="ground_base_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="ground" />
+        <child link="base_link" />
+    </joint>
+    <joint name="base_link_cyclnder_joint" type="revolute">
+        <origin xyz="0 0 0.083" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="cylinder_link" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
+    </joint>
+    <joint name="cylinder_link_first_box_joint" type="revolute">
+        <origin xyz="0 0 0.007" rpy="0 0 0" />
+        <parent link="cylinder_link" />
+        <child link="first_box_link" />
+        <axis xyz="1 0 0" />
+        <limit effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
+    </joint>
+    <joint name="first_box_second_box_joint" type="revolute">
+        <origin xyz="0.021 0 0.075" rpy="0 0 0" />
+        <parent link="first_box_link" />
+        <child link="second_box_link" />
+        <axis xyz="1 0 0" />
+        <limit effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
+    </joint>
+    <joint name="second_box_third_box_joint" type="revolute">
+        <origin xyz="0.021 0 0.075" rpy="0 0 0" />
+        <parent link="second_box_link" />
+        <child link="third_box_link" />
+        <axis xyz="1 0 0" />
+        <limit effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
+    </joint>
+    <joint name="third_box_grabber_joint" type="revolute">
+        <origin xyz="0 0 0.085" rpy="0 0 0" />
+        <parent link="third_box_link" />
+        <child link="grabber_link" />
+        <axis xyz="0 0 1" />
+        <limit effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
+    </joint>
+    <joint name="grabber_link_garbber_left_joint" type="prismatic">
+        <origin xyz="0 0.01 0.04" rpy="0 0 0" />
+        <parent link="grabber_link" />
+        <child link="grabber_left" />
+        <axis xyz="0 1 0" />
+        <limit effort="30" velocity="1.0" lower="0.0" upper="0.03" />
+    </joint>
+    <joint name="grabber_link_garbber_right_joint" type="prismatic">
+        <origin xyz="0 -0.01 0.040" rpy="0 0 0" />
+        <parent link="grabber_link" />
+        <child link="grabber_right" />
+        <axis xyz="0 1 0" />
+        <limit effort="30" velocity="1.0" lower="0.0" upper="-0.03" />
+    </joint>
+    <!--transmissions-->
+    <!--JOINT LIST 
+    	1. base_link_cyclnder_joint
+    	2. cylinder_link_first_box_joint
+    	3. first_box_second_box_joint
+    	4. second_box_third_box_joint
+    	5. third_box_grabber_joint
+    	6. grabber_link_garbber_left_joint
+    	7. grabber_link_garbber_right_joint
+    	-->
+    <!--1.base_link_cyclnder_joint-->
+    <transmission name="trans_base_link_cyclnder_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="base_link_cyclnder_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="second_box_third_box_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <!--2.cylinder_link_first_box_joint-->
+    <transmission name="trans_cylinder_link_first_box_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="cylinder_link_first_box_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="cylinder_link_first_box_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <!--3.first_box_second_box_joint-->
+    <transmission name="trans_first_box_second_box_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="first_box_second_box_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="first_box_second_box_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <!--4.second_box_third_box_joint-->
+    <transmission name="trans_third_box_grabber_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="second_box_third_box_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="second_box_third_box_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <!--5.third_box_grabber_joint-->
+    <transmission name="trans_third_box_grabber_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="third_box_grabber_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="third_box_grabber_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <!--6.grabber_link_garbber_left_joint-->
+    <transmission name="trans_grabber_link_garbber_left_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="grabber_link_garbber_left_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="grabber_link_garbber_left_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <!--7.grabber_link_garbber_right_joint-->
+    <transmission name="trans_grabber_link_garbber_right_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="grabber_link_garbber_right_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="grabber_link_garbber_right_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="arm_controller" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+    <!--JOINT LIST 
+    	1. base_link_cyclnder_joint
+    	2. cylinder_link_first_box_joint
+    	3. first_box_second_box_joint
+    	4. second_box_third_box_joint
+    	5. third_box_grabber_joint
+    	6. grabber_link_garbber_left_joint
+    	7. grabber_link_garbber_right_joint
+    	-->
+    <gazebo reference="base_link_cyclnder_joint">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="cylinder_link_first_box_joint">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="first_box_second_box_joint">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="second_box_third_box_joint">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="third_box_grabber_joint">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="grabber_link_garbber_left_joint">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="grabber_link_garbber_right_joint">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+</robot>
+
