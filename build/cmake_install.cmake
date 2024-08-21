@@ -132,6 +132,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/yahboom/my_project_move_it/build/gtest/cmake_install.cmake")
   include("/home/yahboom/my_project_move_it/build/arm_move_it/cmake_install.cmake")
+  include("/home/yahboom/my_project_move_it/build/python_scipt_pkg/cmake_install.cmake")
+  include("/home/yahboom/my_project_move_it/build/my_robot_nodes/cmake_install.cmake")
+  include("/home/yahboom/my_project_move_it/build/project1/cmake_install.cmake")
   include("/home/yahboom/my_project_move_it/build/my_robot_description/cmake_install.cmake")
 
 endif()

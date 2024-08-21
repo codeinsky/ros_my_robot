@@ -1,0 +1,8 @@
+prefix=/home/yahboom/my_project_move_it/devel
+
+Name: project1
+Description: Description of project1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

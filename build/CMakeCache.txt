@@ -409,6 +409,12 @@ class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/noetic/share/cv_bridge/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/noetic/share/geometry_msgs/cmake
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/yahboom/my_project_move_it/build/gtest/googlemock
 
@@ -455,8 +461,11 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for image_stransport.
+image_stransport_DIR:PATH=image_stransport_DIR-NOTFOUND
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
+lib:FILEPATH=/opt/ros/noetic/lib/librosconsole_bridge.so
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
@@ -470,8 +479,20 @@ my_robot_description_BINARY_DIR:STATIC=/home/yahboom/my_project_move_it/build/my
 //Value Computed by CMake
 my_robot_description_SOURCE_DIR:STATIC=/home/yahboom/my_project_move_it/src/my_robot_description
 
+//Value Computed by CMake
+my_robot_nodes_BINARY_DIR:STATIC=/home/yahboom/my_project_move_it/build/my_robot_nodes
+
+//Value Computed by CMake
+my_robot_nodes_SOURCE_DIR:STATIC=/home/yahboom/my_project_move_it/src/my_robot_nodes
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
+
+//Value Computed by CMake
+project1_BINARY_DIR:STATIC=/home/yahboom/my_project_move_it/build/project1
+
+//Value Computed by CMake
+project1_SOURCE_DIR:STATIC=/home/yahboom/my_project_move_it/src/project1
 
 //Value Computed by CMake
 python_scipt_pkg_BINARY_DIR:STATIC=/home/yahboom/my_project_move_it/build/python_scipt_pkg
@@ -508,6 +529,9 @@ rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
+
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
@@ -672,7 +696,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

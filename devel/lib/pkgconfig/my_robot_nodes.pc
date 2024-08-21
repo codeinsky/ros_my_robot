@@ -1,0 +1,8 @@
+prefix=/home/yahboom/my_project_move_it/devel
+
+Name: my_robot_nodes
+Description: Description of my_robot_nodes
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

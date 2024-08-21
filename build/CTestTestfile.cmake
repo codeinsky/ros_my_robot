@@ -6,4 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("arm_move_it")
+subdirs("python_scipt_pkg")
+subdirs("my_robot_nodes")
+subdirs("project1")
 subdirs("my_robot_description")
