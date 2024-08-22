@@ -20,7 +20,7 @@ def sensors_node():
     pub5 = rospy.Publisher('sensor10_topic', String, queue_size = 10)
     pub6 = rospy.Publisher('sensor11_topic', String, queue_size = 10)
     #Serial connection 
-    serial_object = serial.Serial('/dev/ttyUSB1',9600)
+    serial_object = serial.Serial('/dev/ttyUSB0',9600)
     # Setting loop friquency 
     rate = rospy.Rate(10)
     # Main node loop 
