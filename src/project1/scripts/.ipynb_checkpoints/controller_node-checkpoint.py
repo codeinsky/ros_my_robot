@@ -2,6 +2,10 @@ import rospy
 from std_msgs.msg import Bool, String
 from std_srvs.srv import Empty,Trigger
 import datetime 
+import sys
+from time import sleep
+sys.path.insert(0,'../../Dofbot/0.py_install/Arm_Lib/')
+from Arm_Lib import Arm_Device
 counter = 0 
 threshold = 20
 free_slot = "none"
@@ -54,6 +58,13 @@ def sensor_callback(msg):
                 print("Movement failed")
         else:
             print("Sorry the is no empty slots to receive the item")
+            Arm = Arm_Device()
+            Arm.Arm_Buzzer_On(1)
+            sleep(1)
+            Arm.Arm_Buzzer_On(0)
+            
+            del Arm
+    # go home 
                 
             
             
