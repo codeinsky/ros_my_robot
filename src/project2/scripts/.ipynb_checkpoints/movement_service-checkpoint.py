@@ -10,8 +10,9 @@ from time import sleep
 class scan_store_slots:
     def __init__(self):
         rospy.init_node("scan_store_slots")
-        self.brige = CvBridge()
+        self.bridge = CvBridge()
         self.service = rospy.Service("start_scan", Trigger, self.start_scan)
+        self.process_image_service = rospy.ServiceProxy("/process_image", Trigger)
         self.positions = {
             "home": [90,90,90,90,90,90],
             "init": [88, 131, 1, 49, 90, 146], 
@@ -66,8 +67,10 @@ class scan_store_slots:
         # go home , complted
         Arm.Arm_serial_servo_write6(90,90,90,90,90,90,1500)
         return TriggerResponse(success=True, message="Completed")
+        
     def process_image(self, slot_name):
         print("processing the image for slot:", slot_name) 
+        self.process_image_service()
         return {"status:":"sucess"}
 if __name__== '__main__':
     try:
