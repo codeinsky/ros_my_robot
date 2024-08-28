@@ -1,0 +1,16 @@
+controller_list:
+  - name: arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - base_link_cyclnder_joint
+      - cylinder_link_first_box_joint
+      - first_box_second_box_joint
+      - second_box_third_box_joint
+  - name: gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - grabber_link_garbber_right_joint

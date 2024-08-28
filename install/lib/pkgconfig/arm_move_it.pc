@@ -1,0 +1,8 @@
+prefix=/home/yahboom/my_project_move_it/install
+
+Name: arm_move_it
+Description: Description of arm_move_it
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

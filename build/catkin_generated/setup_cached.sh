@@ -7,4 +7,9 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/yahboom/my_project_move_it/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/yahboom/my_project_move_it/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/yahboom/my_project_move_it/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/yahboom/my_project_move_it/build'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/yahboom/my_project_move_it/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/yahboom/my_project_move_it/src:$ROS_PACKAGE_PATH"

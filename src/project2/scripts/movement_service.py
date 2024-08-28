@@ -26,52 +26,55 @@ class scan_store_slots:
     def start_scan(self,message):
         print("Start scan")
         sleep_time= 3
+        stable_time = 3
         Arm = Arm_Device()
         Arm.Arm_Buzzer_On(1)
         sleep(1)
         Arm.Arm_Buzzer_On(0)
         # go home 
-        Arm.Arm_serial_servo_write6(90,90,90,90,90,90,1500)
+        Arm.Arm_serial_servo_write6(90,90,90,90,90,60,1500)
         sleep(sleep_time)
         # go init 
-        Arm.Arm_serial_servo_write6(88, 131, 1, 49, 90, 90 ,2000)
+        Arm.Arm_serial_servo_write6(88, 131, 1, 49, 90, 60 ,2000)
         sleep(sleep_time)
         # go slot 8 
         Arm.Arm_serial_servo_write6(*self.positions['slot_8'])
-        sleep(sleep_time)
+        sleep(sleep_time + stable_time)
         # take image and process 
         self.process_image("8")
-        # go init
-        Arm.Arm_serial_servo_write6(88, 131, 1, 49, 90, 90 ,2000)
+        go init
+        Arm.Arm_serial_servo_write6(88, 131, 1, 49, 90, 60 ,2000)
         sleep(sleep_time)
         
         # go slot 10
         Arm.Arm_serial_servo_write6(*self.positions['slot_10'])
-        sleep(sleep_time)
+        sleep(sleep_time + stable_time)
         # take image and process 
         self.process_image("10")
         
         # go init
-        Arm.Arm_serial_servo_write6(88, 131, 1, 49, 90, 90 ,2000)
+        Arm.Arm_serial_servo_write6(88, 131, 1, 49, 90, 60 ,2000)
         sleep(sleep_time)
         
         # go to slot 9
         Arm.Arm_serial_servo_write6(*self.positions['slot_9'])
-        sleep(sleep_time)
+        sleep(sleep_time + stable_time)
         # take image and process 
         self.process_image("9")
         
         # go init
-        Arm.Arm_serial_servo_write6(88, 131, 1, 49, 90, 90 ,2000)
+        Arm.Arm_serial_servo_write6(88, 131, 1, 49, 90, 60 ,2000)
         sleep(sleep_time)
         # go home , complted
-        Arm.Arm_serial_servo_write6(90,90,90,90,90,90,1500)
+        Arm.Arm_serial_servo_write6(90,90,90,90,90,80,1500)
         return TriggerResponse(success=True, message="Completed")
         
     def process_image(self, slot_name):
-        print("processing the image for slot:", slot_name) 
-        self.process_image_service()
-        return {"status:":"sucess"}
+        print("Send command so image process service for slot:", slot_name) 
+        response = self.process_image_service()
+        if response.success:
+            return {"status:":"sucess"}
+        
 if __name__== '__main__':
     try:
         main_node = scan_store_slots()

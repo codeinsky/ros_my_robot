@@ -16,11 +16,11 @@ def main():
         if not ret:
             print("failed to start camera")
             break
-        # cv2.imshow('Online video', frame)
+        cv2.imshow('Online video camera_node', frame)
     
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
+        
         # cast image to ros message type 
         ros_image = bridge.cv2_to_imgmsg(frame, encoding="bgr8")
         image_publisher.publish(ros_image)
