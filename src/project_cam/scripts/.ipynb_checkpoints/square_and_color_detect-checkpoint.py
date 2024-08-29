@@ -26,7 +26,7 @@ class SquareAndColorDetectionNode():
         image_frame = self.current_image
         # object detecting 
         # 1. detetcing square 
-        path = "./slot_" + slot_id +"/"
+        path = "./static/slot_" + slot_id +"/"
         cv2.imwrite(path+"image.jpg", image_frame)
         # Transfor to grey 
         gray = cv2.cvtColor(self.current_image, cv2.COLOR_BGR2GRAY)
@@ -38,7 +38,7 @@ class SquareAndColorDetectionNode():
         edges = cv2.Canny(blurred,2,80)
         cv2.imwrite(path+"edges.jpg", edges)
         # fill the gaps 
-        dilated = cv2.dilate(edges, None, iterations=1)
+        dilated = cv2.dilate(edges, None, iterations=4)
         cv2.imwrite(path+"dilated.jpg", dilated)
         # create conturs 
         contours,_ = cv2.findContours(dilated, cv2.RETR_EXTERNAL ,cv2.CHAIN_APPROX_SIMPLE) 

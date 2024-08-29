@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Store status</title>
+    </head>
+    <body>
+        <button  id="trigger-api-button">Start scan</button>
+        <br>
+        <div id="response-message"></div>
+        <div>
+            Slot10
+            <img src="{{ url_for('static', filename='/slot_10/image.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_10/image_gray.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_10/blur.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_10/edges.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_10/image_processed.jpg') }}"  style="width:200px;">
+        </div>
+        <div>
+             Slot9
+            <img src="{{ url_for('static', filename='/slot_9/image.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_9/image_gray.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_9/blur.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_9/edges.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_9/image_processed.jpg') }}"  style="width:200px;">
+        </div> 
+        <div>
+             Slot8
+            <img src="{{ url_for('static', filename='/slot_8/image.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_8/image_gray.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_8/blur.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_8/image_processed.jpg') }}"  style="width:200px;">
+        </div>
+    </body>
+    <script>
+        document.getElementById('trigger-api-button').onclick = function() {
+            fetch('/start_service', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the response message
+                document.getElementById('response-message').innerText = data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('response-message').innerText = 'Error triggering API';
+            });
+        };
+    </script>
+</html>

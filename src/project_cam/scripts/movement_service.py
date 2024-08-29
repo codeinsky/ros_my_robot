@@ -8,7 +8,7 @@ sys.path.insert(0,'../../Dofbot/0.py_install/Arm_Lib/')
 
 from Arm_Lib import Arm_Device
 from time import sleep
-from project_cam.srv import CustomService
+# from project_cam.srv import CustomService
 
 class scan_store_slots:
     def __init__(self):
