@@ -7,7 +7,7 @@ import numpy as np
 message = ""
 class SquareAndColorDetectionNode():
     def __init__(self):
-        rospy.init_node("square_color_detetion_service")
+        rospy.init_node("object_detetion_service")
         self.bridge = CvBridge()
         self.current_image = None 
         self.image_subscriber = rospy.Subscriber('/camera/images',Image, self.store_image)

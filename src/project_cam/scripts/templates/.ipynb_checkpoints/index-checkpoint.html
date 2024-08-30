@@ -3,33 +3,105 @@
         <title>Store status</title>
     </head>
     <body>
-        <button  id="trigger-api-button">Start scan</button>
+        <button  id="trigger-api-button" style="width:200px">Start scan</button>
         <br>
         <div id="response-message"></div>
-        <div>
+       <!-- <div>
             Slot10
-            <img src="{{ url_for('static', filename='/slot_10/image.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_10/image_gray.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_10/blur.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_10/edges.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_10/image_processed.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_10/image.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_10/image_gray.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_10/blur.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_10/edges.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_10/image_processed.jpg') }}"  style="width:150px;">
         </div>
         <div>
              Slot9
-            <img src="{{ url_for('static', filename='/slot_9/image.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_9/image_gray.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_9/blur.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_9/edges.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_9/image_processed.jpg') }}"  style="width:200px;">
+            <img src="{{ url_for('static', filename='/slot_9/image.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_9/image_gray.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_9/blur.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_9/edges.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_9/image_processed.jpg') }}"  style="width:150px;">
         </div> 
         <div>
              Slot8
-            <img src="{{ url_for('static', filename='/slot_8/image.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_8/image_gray.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_8/blur.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:200px;">
-            <img src="{{ url_for('static', filename='/slot_8/image_processed.jpg') }}"  style="width:200px;">
-        </div>
+            <img src="{{ url_for('static', filename='/slot_8/image.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_8/image_gray.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_8/blur.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:150px;">
+            <img src="{{ url_for('static', filename='/slot_8/image_processed.jpg') }}"  style="width:150px;">
+        </div>  -->
+
+
+        <table border="1">
+  <tr>
+    <th></th>
+    <th>Original image</th>
+    <th>Grey</th>
+    <th>Blurr</th>
+    <th>Edges</th>
+    <th>Conturs</th>
+  </tr>
+  <tr>
+    <th>Slot 10</th>
+    <td> 
+        <img src="{{ url_for('static', filename='/slot_10/image.jpg') }}"  style="width:150px;">
+    </td>
+      
+    <td>
+        <img src="{{ url_for('static', filename='/slot_10/image_gray.jpg') }}"  style="width:150px;">
+    </td>
+      
+    <td>
+        <img src="{{ url_for('static', filename='/slot_10/blur.jpg') }}"  style="width:150px;">
+    </td>
+      
+    <td>
+        <img src="{{ url_for('static', filename='/slot_10/edges.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_10/image_processed.jpg') }}"  style="width:150px;">
+    </td>
+  </tr>
+  <tr>
+    <th>Slot 9</th>
+    <td>
+         <img src="{{ url_for('static', filename='/slot_9/image.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_9/image_gray.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_8/blur.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_8/image_processed.jpg') }}"  style="width:150px;">
+    </td>
+  </tr>
+  <tr>
+    <th>Slot 8</th>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_8/image.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_8/image_gray.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
+         <img src="{{ url_for('static', filename='/slot_8/blur.jpg') }}"  style="width:150px;">
+    </td>
+    <td><img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:150px;"></td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_8/image_processed.jpg') }}"  style="width:150px;">
+    </td>
+  </tr>
+
+</table>
+
+
+
+        
     </body>
     <script>
         document.getElementById('trigger-api-button').onclick = function() {
