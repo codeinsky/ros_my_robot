@@ -6,30 +6,7 @@
         <button  id="trigger-api-button" style="width:200px">Start scan</button>
         <br>
         <div id="response-message"></div>
-       <!-- <div>
-            Slot10
-            <img src="{{ url_for('static', filename='/slot_10/image.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_10/image_gray.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_10/blur.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_10/edges.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_10/image_processed.jpg') }}"  style="width:150px;">
-        </div>
-        <div>
-             Slot9
-            <img src="{{ url_for('static', filename='/slot_9/image.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_9/image_gray.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_9/blur.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_9/edges.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_9/image_processed.jpg') }}"  style="width:150px;">
-        </div> 
-        <div>
-             Slot8
-            <img src="{{ url_for('static', filename='/slot_8/image.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_8/image_gray.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_8/blur.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:150px;">
-            <img src="{{ url_for('static', filename='/slot_8/image_processed.jpg') }}"  style="width:150px;">
-        </div>  -->
+      
 
 
         <table border="1">
@@ -39,6 +16,7 @@
     <th>Grey</th>
     <th>Blurr</th>
     <th>Edges</th>
+    <th>Dilate</th>
     <th>Conturs</th>
   </tr>
   <tr>
@@ -59,6 +37,9 @@
         <img src="{{ url_for('static', filename='/slot_10/edges.jpg') }}"  style="width:150px;">
     </td>
     <td>
+        <img src="{{ url_for('static', filename='/slot_10/dilated.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
         <img src="{{ url_for('static', filename='/slot_10/image_processed.jpg') }}"  style="width:150px;">
     </td>
   </tr>
@@ -71,13 +52,16 @@
         <img src="{{ url_for('static', filename='/slot_9/image_gray.jpg') }}"  style="width:150px;">
     </td>
     <td>
-        <img src="{{ url_for('static', filename='/slot_8/blur.jpg') }}"  style="width:150px;">
+        <img src="{{ url_for('static', filename='/slot_9/blur.jpg') }}"  style="width:150px;">
     </td>
     <td>
-        <img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:150px;">
+        <img src="{{ url_for('static', filename='/slot_9/edges.jpg') }}"  style="width:150px;">
     </td>
     <td>
-        <img src="{{ url_for('static', filename='/slot_8/image_processed.jpg') }}"  style="width:150px;">
+        <img src="{{ url_for('static', filename='/slot_9/dilated.jpg') }}"  style="width:150px;">
+    </td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_9/image_processed.jpg') }}"  style="width:150px;">
     </td>
   </tr>
   <tr>
@@ -91,7 +75,12 @@
     <td>
          <img src="{{ url_for('static', filename='/slot_8/blur.jpg') }}"  style="width:150px;">
     </td>
-    <td><img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:150px;"></td>
+    <td>
+        <img src="{{ url_for('static', filename='/slot_8/edges.jpg') }}"  style="width:150px;">
+    </td>
+      <td>
+        <img src="{{ url_for('static', filename='/slot_8/dilated.jpg') }}"  style="width:150px;">
+    </td>
     <td>
         <img src="{{ url_for('static', filename='/slot_8/image_processed.jpg') }}"  style="width:150px;">
     </td>
